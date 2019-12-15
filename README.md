@@ -1,1 +1,1 @@
-# Machine-Learning-Dance
+# Everybody Machine Learning Dance Now!
