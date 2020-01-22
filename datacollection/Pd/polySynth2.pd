@@ -1,0 +1,4 @@
+#N canvas 899 458 686 419 10;
+#X obj 120 53 inlet;
+#X obj 119 296 clone simpV3 16;
+#X connect 0 0 1 0;

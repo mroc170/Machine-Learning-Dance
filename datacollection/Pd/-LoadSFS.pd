@@ -1,0 +1,180 @@
+#N canvas 49 189 494 283 10;
+#X declare -path ./abs;
+#X declare -path ./sfs;
+#X text -68 27 click 2 load samples;
+#N canvas 92 333 798 562 load 1;
+#X obj 267 -17 loadbang;
+#X obj 355 -14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 27 228 1-5 vocal samples;
+#X text 27 261 6-10 noisy samples;
+#X text 158 409 can pick a few other samples.....;
+#X obj 11 -24 loadbang;
+#X obj 410 317 SampleLoader 13;
+#X msg 11 30 \; 1-sample normalize 0.95 \; 2-sample normalize 0.95
+\; 3-sample normalize 0.95 \; 4-sample normalize 0.95 \; 5-sample normalize
+0.95 \; 6-sample normalize 0.95 \; 7-sample normalize 0.95 \; 8-sample
+normalize 0.95 \; 9-sample normalize 0.95 \; 10-sample normalize 0.95
+\; 11-sample normalize 0.95 \; 12-sample normalize 0.95 \; 13-sample
+normalize 0.95 \; 14-sample normalize 0.95;
+#X obj 12 7 del 4000;
+#X obj 268 13 t b b b b b b b b b b b b b b b b b b;
+#X floatatom 36 305 5 0 0 0 - - -, f 5;
+#X floatatom 37 351 8 0 0 0 - - -, f 8;
+#X obj 35 327 tabread 13-sample;
+#X obj 403 163 SampleLoader 6;
+#X obj 402 58 SampleLoader 1;
+#X obj 402 78 SampleLoader 2;
+#X obj 402 99 SampleLoader 3;
+#X obj 402 120 SampleLoader 4;
+#X obj 402 142 SampleLoader 5;
+#X obj 403 186 SampleLoader 7;
+#X obj 403 208 SampleLoader 8;
+#X obj 403 230 SampleLoader 9;
+#X obj 403 251 SampleLoader 10;
+#X obj 410 275 SampleLoader 11;
+#X obj 410 296 SampleLoader 12;
+#X obj 410 337 SampleLoader 14;
+#X msg 512 296 read -resize ../sfs/tick1.wav 12-sample;
+#X msg 512 317 read -resize ../sfs/tick1.wav 13-sample;
+#X msg 512 337 read -resize ../sfs/tick1.wav 14-sample;
+#X msg 492 58 read -resize ../sfs/br1.wav 1-sample;
+#X msg 492 78 read -resize ../sfs/br2.wav 2-sample;
+#X msg 492 99 read -resize ../sfs/clang1.wav 3-sample;
+#X msg 492 120 read -resize ../sfs/sn1.wav 4-sample;
+#X msg 492 142 read -resize ../sfs/sn2.wav 5-sample;
+#X msg 505 165 read -resize ../sfs/h1.wav 6-sample;
+#X msg 505 186 read -resize ../sfs/h2.wav 7-sample;
+#X msg 505 208 read -resize ../sfs/tick1.wav 8-sample;
+#X msg 505 229 read -resize ../sfs/tick2.wav 9-sample;
+#X msg 505 251 read -resize ../sfs/tick3.wav 10-sample;
+#X msg 512 274 read -resize ../sfs/tick4.wav 11-sample;
+#X connect 0 0 9 0;
+#X connect 1 0 9 0;
+#X connect 5 0 8 0;
+#X connect 8 0 7 0;
+#X connect 9 0 29 0;
+#X connect 9 1 30 0;
+#X connect 9 2 31 0;
+#X connect 9 3 32 0;
+#X connect 9 4 33 0;
+#X connect 9 5 34 0;
+#X connect 9 6 35 0;
+#X connect 9 7 36 0;
+#X connect 9 8 37 0;
+#X connect 9 9 38 0;
+#X connect 9 10 39 0;
+#X connect 9 11 26 0;
+#X connect 9 12 27 0;
+#X connect 9 13 28 0;
+#X connect 10 0 12 0;
+#X connect 12 0 11 0;
+#X connect 26 0 24 0;
+#X connect 27 0 6 0;
+#X connect 28 0 25 0;
+#X connect 29 0 14 0;
+#X connect 30 0 15 0;
+#X connect 31 0 16 0;
+#X connect 32 0 17 0;
+#X connect 33 0 18 0;
+#X connect 34 0 13 0;
+#X connect 35 0 19 0;
+#X connect 36 0 20 0;
+#X connect 37 0 21 0;
+#X connect 38 0 22 0;
+#X connect 39 0 23 0;
+#X restore -118 27 pd load;
+#X obj 181 26 declare -path ./abs;
+#X obj 181 50 declare -path ./sfs;
+#N canvas 0 23 450 300 ENV 0;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array ENV 200 float 3;
+#A 0 8.59499e-06 0.0156801 0.0313477 0.047008 0.0626566 0.0782889 0.0939028
+0.109495 0.125058 0.14059 0.15609 0.171551 0.186967 0.202339 0.217664
+0.232932 0.248142 0.263294 0.278384 0.293398 0.308343 0.323215 0.338007
+0.352711 0.367332 0.381868 0.396302 0.410639 0.42488 0.439019 0.45304
+0.466954 0.480759 0.494441 0.507998 0.521436 0.534751 0.547922 0.560961
+0.57387 0.586637 0.59925 0.611722 0.624051 0.636216 0.648224 0.660081
+0.67178 0.683297 0.694653 0.705847 0.716862 0.727694 0.738355 0.748843
+0.759129 0.769233 0.779157 0.78889 0.798414 0.807751 0.8169 0.825834
+0.834564 0.843098 0.851433 0.859536 0.867436 0.875134 0.882611 0.889861
+0.896902 0.903734 0.910323 0.916692 0.922847 0.928777 0.93446 0.939923
+0.945167 0.950166 0.954927 0.959464 0.963776 0.967823 0.971644 0.975236
+0.978585 0.98168 0.984545 0.98718 0.989551 0.991682 0.99358 0.995239
+0.996631 0.997789 0.998714 0.999381 0.999797 0.999978 0.999926 0.999599
+0.999037 0.998241 0.997197 0.995893 0.994355 0.992584 0.990551 0.988275
+0.985768 0.983025 0.980015 0.976777 0.97331 0.969594 0.965631 0.961443
+0.957029 0.952355 0.947455 0.942333 0.936978 0.931377 0.925558 0.919523
+0.913245 0.906742 0.900027 0.893098 0.885926 0.878546 0.870961 0.863155
+0.855128 0.8469 0.838475 0.829823 0.820972 0.811929 0.802687 0.793232
+0.783592 0.773768 0.763742 0.753527 0.743135 0.732567 0.721799 0.710862
+0.699759 0.688479 0.677022 0.665407 0.653635 0.641688 0.629587 0.617337
+0.604938 0.592378 0.579679 0.566844 0.553862 0.540741 0.527494 0.514123
+0.500611 0.486981 0.473238 0.459375 0.445394 0.431309 0.417122 0.402824
+0.388429 0.373942 0.359365 0.344692 0.329938 0.315107 0.300194 0.285206
+0.270151 0.255033 0.239845 0.224601 0.209303 0.193954 0.178554 0.163113
+0.147633 0.132114 0.116563 0.100984 0.0853816 0.0697557 0.0541137 0.0384589
+0.0227942;
+#X coords 0 1 199 -0.1 200 140 1;
+#X restore 74 78 graph;
+#N canvas 551 115 428 255 write 0;
+#X obj 83 160 tabwrite~ ENV;
+#X obj 69 67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 128 82 0.75;
+#N canvas 101 107 600 388 make-bell-curve 0;
+#X obj 159 142 f;
+#X obj 197 142 + 1;
+#X msg 175 111 0;
+#X obj 161 177 t f f;
+#X obj 91 248 expr exp(-$f1*$f1);
+#X obj 90 219 expr ($f1-100)/25;
+#X obj 133 101 until;
+#X msg 133 77 200;
+#X obj 133 43 t b b;
+#X obj 133 16 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 144 283 tabwrite ENV;
+#X text 241 220 create a bell curve;
+#X obj 133 -19 inlet;
+#X connect 0 0 1 0;
+#X connect 0 0 3 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 1;
+#X connect 3 0 5 0;
+#X connect 3 1 10 1;
+#X connect 4 0 10 0;
+#X connect 5 0 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 8 1 2 0;
+#X connect 9 0 8 0;
+#X connect 12 0 9 0;
+#X restore 188 133 pd make-bell-curve;
+#X obj 188 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 83 107 osc~ 110;
+#X connect 1 0 0 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 1;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;
+#X restore 137 49 pd write env;
+#X restore -118 66 pd ENV;
+#N canvas 248 211 450 300 lengths 0;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array lengths 20 float 3;
+#A 0 0 298.646 355.833 214.792 266.854 190.604 140.458 203.792 101.646
+260.5 187.229 93.6042 101.646 101.646 101.646 0.0142975 0.0142975 0.0142975
+0.0142975 0.0142975;
+#X coords 0 45000 19 -1 200 140 1;
+#X restore -117 77 graph;
+#X obj 223 125 tabread lengths;
+#X floatatom 223 100 5 0 0 0 - - -, f 5;
+#X floatatom 224 150 8 0 0 0 - - -, f 8;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X restore -118 105 pd lengths;
+#X text -48 107 saves lengths of sound files;
+#X text -75 67 in case you need an envelope;

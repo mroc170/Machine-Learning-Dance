@@ -1,0 +1,45 @@
+#N canvas 337 229 736 391 10;
+#X obj 28 257 throw~ dac;
+#X obj 28 226 *~;
+#X obj 182 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 182 144 line~;
+#X obj 195 60 r \$1-play;
+#X obj 219 86 r all-play;
+#X obj 29 24 tabplay~;
+#X obj 96 24 spigot;
+#X obj 129 -4 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 147 -3 loop or not;
+#X obj 276 -4 loadbang;
+#X msg 276 17 1;
+#X obj 29 -34 r start-loop;
+#X obj 462 105 loadbang;
+#X obj 462 126 f \$1;
+#X msg 462 147 set sf\$1;
+#X obj 39 -16 sel 0 1;
+#X msg 39 5 stop;
+#X obj 87 6 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 182 125 \$1 250;
+#X connect 1 0 0 0;
+#X connect 2 0 19 0;
+#X connect 3 0 1 1;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 6 1 7 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 1;
+#X connect 10 0 11 0;
+#X connect 11 0 8 0;
+#X connect 12 0 16 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 6 0;
+#X connect 16 0 17 0;
+#X connect 16 1 18 0;
+#X connect 17 0 6 0;
+#X connect 18 0 6 0;
+#X connect 19 0 3 0;
+#X coords 0 -1 1 1 100 20 1 100 100;

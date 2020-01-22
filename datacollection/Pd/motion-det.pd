@@ -1,0 +1,37 @@
+#N canvas 1003 28 357 647 10;
+#X floatatom 182 -24 5 0 0 0 - - -, f 5;
+#X obj 182 -45 delta 2;
+#X obj 182 79 change;
+#X obj 182 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 148 201 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 182 -4 abs;
+#X obj 148 179 sel 1 0;
+#X obj 176 200 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 269 134 spigot;
+#X obj 182 27 t f f;
+#X floatatom 271 160 5 0 0 0 - - -, f 5;
+#X obj 182 58 >= 0.25;
+#X obj 181 -191 inlet;
+#X text 239 -191 motion in x y or z;
+#X obj 195 275 outlet;
+#X obj 218 228 pack f f;
+#X connect 0 0 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 3 0 8 1;
+#X connect 5 0 9 0;
+#X connect 6 0 4 0;
+#X connect 6 1 7 0;
+#X connect 8 0 10 0;
+#X connect 9 0 11 0;
+#X connect 9 1 8 0;
+#X connect 10 0 15 1;
+#X connect 11 0 2 0;
+#X connect 11 0 15 0;
+#X connect 12 0 1 0;
+#X connect 15 0 14 0;
+#X coords 0 -1 1 1 100 20 1 100 100;

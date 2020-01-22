@@ -1,0 +1,40 @@
+Touch Designer
+-get data from camera
+-uses touch designer to encode it and send to pd
+-touch designer has built in functions for kinect
+
+OSC messaging protocol, comes over the network
+
+
+OSC_Kinect_OUT.1.toe
+
+
+kinect3 - CHOP (channel operator)
+- gathers every coordinate point, one object 
+
+
+-touch designer does the tagging of which point is which joint!!!!!
+
+rename2
+- take the colon t out and replace with /z
+- that is OSC messaging protocol
+- done for use later
+
+oscout1
+- lets you specify a network address/port to send to
+
+- need router or ethernet to send to jakes or can use PD on my laptop locally
+
+
+SNOW USES PD TO
+- to code synth
+
+
+in pd
+-dump osc and specify port
+send kinectData - wireless connection
+routeskeleton.pd --- receives the kinect data and routes only p1 and joint and the dimension
+
+
+
+think about kinectRecorder in TouchDesigner

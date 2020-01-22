@@ -1,0 +1,27 @@
+#N canvas 663 213 777 665 10;
+#X obj -5 -105 r \$1/\$2-XYZ;
+#X obj -5 -65 spigot;
+#X obj 103 118 tgl 12 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 157 21 r view-all-points;
+#X obj 169 66 r \$1/\$2-view;
+#X obj -5 -26 unpack f f f;
+#X obj 120 120 vsl 10 60 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1941 1;
+#X obj 123 185 hsl 60 11 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4353 1;
+#X obj 146 133 vsl 30 46 0 6 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1555 1;
+#X text 120 125 y;
+#X text 127 182 x;
+#X text 155 152 z;
+#X obj 97 -54 print;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 7 0;
+#X connect 5 1 6 0;
+#X connect 5 2 8 0;
+#X coords 0 -1 1 1 90 100 1 100 100;
