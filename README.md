@@ -5,6 +5,7 @@ To setup the environment install the following packages.
 <ol>
   <li> Jupyter Notebooks </li>
   <li> pandas </li>
+  <li> matplotlib </li>
   <li> Spotipy </li>
 </ol>
 
