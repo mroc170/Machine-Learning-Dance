@@ -14,6 +14,7 @@
   <li> matplotlib </li>
   <li> sklearn </li>
   <li> Spotipy </li>
+  <li> Processing </li>
 </ol>
 
 ### Producing Animations
