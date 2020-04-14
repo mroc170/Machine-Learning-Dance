@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.time.LocalDateTime;
 
 
-import peasy.*;
-PeasyCam cam;
 int frameR;
 String fileName;
 int canvasW = 500;
@@ -15,9 +13,9 @@ PGraphics canvas;
 SkeletonVis dancer;
 
 public void settings() {
-  frameR = 24;
-  size(1500, 1500, P3D);
-  pixelDensity(2);
+  frameR = 15;
+  size(1000, 1000, P3D);
+  //pixelDensity(2);
   smooth(8);
   
   //canvas = createGraphics(canvasW, canvasH, P3D);
