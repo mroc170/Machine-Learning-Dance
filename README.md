@@ -14,9 +14,13 @@
   <li> matplotlib </li>
   <li> sklearn </li>
   <li> Spotipy </li>
-  <li> Processing </li>
 </ol>
 
 ### Producing Animations
+
+<ol>
+  <li> Processing </li>
+</ol>
+
 
 Drive Folder with Milestones: https://drive.google.com/drive/folders/18AeL2kwzEAeetusj04yZjx8-WA594cLq?usp=sharing
