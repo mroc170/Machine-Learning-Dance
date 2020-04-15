@@ -9,9 +9,9 @@ Bringing together the disciplines of computer science and dance, our project is 
 ### Recording Dance via Kinect
 
 All files necessary for recording dance can be found in the **data collection** folder of this repository.
-1.  **Kinect Sensor v2** hardware (including USB 2.0 connection cord)
-2.  [**TouchDesigner**](https://derivative.ca/download): Additional [information](https://derivative.ca/UserGuide/Kinect) about Kinect 2 Support in TouchDesigner.
-3. [**Pure Data**](https://puredata.info/): The necessary files to open while recording dance are as follows: pdtestDr.Snow.pd, routeskeleton.pd, and toFile.pd. Note that in all of these files, the Pure Data toggles will need to be activated to allow data through the pipeline. 
+1.  Kinect Sensor v2 hardware (including USB 2.0 connection cord)
+2.  [TouchDesigner](https://derivative.ca/download): Additional [information](https://derivative.ca/UserGuide/Kinect) about Kinect 2 Support in TouchDesigner.
+3. [Pure Data](https://puredata.info/): The necessary files to open while recording dance are as follows: pdtestDr.Snow.pd, routeskeleton.pd, and toFile.pd. Note that in all of these files, the Pure Data toggles will need to be activated to allow data through the pipeline. 
 
 ### Training Data
 
