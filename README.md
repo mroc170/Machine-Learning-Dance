@@ -16,11 +16,12 @@ All files necessary for recording dance can be found in the **data collection** 
 ### Training Data
 
 <ol>
-  <li> <a href="https://www.python.org/downloads/" >Python</a>
+  <li> <a href="https://www.python.org/downloads/" >Python 3.7</a>
     <ul> 
       <li> Download Python and follow the installer instructions </li>
       <li> On windows, make sure to set the PATH globally </li>
       <li> It is recommended to install PIP as well to simplify the installation of the following packages </li>
+      <li> Note: it is important to install Python 3.7.x, as PyTorch does not currently support Python 3.8+</li>
     </ul>
   </li>
   <li> <a href="https://jupyter.org/install" >Jupyter Notebooks</a> 
