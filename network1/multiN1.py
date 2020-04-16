@@ -385,7 +385,6 @@ if __name__ == '__main__':
     #pulls results from process queue (needs to be done before joining)
     for process in processes:
         k, score = cue.get()
-        print(k, score)
         wcss[k-1] = score
 
     #ends all processes
