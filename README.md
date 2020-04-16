@@ -16,16 +16,43 @@ All files necessary for recording dance can be found in the **data collection** 
 ### Training Data
 
 <ol>
+  <li> <a href="https://www.python.org/downloads/" >Python</a>
+    <ul> 
+      <li> Download Python and follow the installer instructions </li>
+      <li> On windows, make sure to set the PATH globally </li>
+      <li> It is recommended to install PIP as well to simplify the installation of the following packages </li>
+    </ul>
+  </li>
   <li> <a href="https://jupyter.org/install" >Jupyter Notebooks</a> 
     <ul>
       <li> Follow the above link for instructions on how to setup Notebooks </li>
       <li> Run an instance on your machine to run the project files cell-by-cell </li>
     </ul>
   </li>
-  <li> pandas </li>
-  <li> matplotlib </li>
-  <li> sklearn </li>
-  <li> Spotipy </li>
+  <li> <a href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html">pandas</a> 
+    <ul>
+      <li><code>pip install pandas</code></li>
+    </ul>
+  </li>
+  <li> <a href="https://matplotlib.org/users/installing.html">matplotlib</a>
+    <ul>
+      <li><code>python -m pip install -U pip</code></li>
+      <li><code>python -m pip install -U matplotlib</code></li>
+    </ul>
+  </li>
+  <li> <a href="https://scikit-learn.org/stable/install.html">scikit-learn</a> 
+    <ul>
+      <li><code>pip install -U scikit-learn</code></li>
+    </ul>
+  </li>
+  <li> <a href="https://spotipy.readthedocs.io/en/2.11.1/#installation">Spotipy</a> 
+    <ul>
+      <li><code>pip install spotipy --upgrade</code></li>
+    </ul>
+  </li>
+  <li> <a href="https://pytorch.org/get-started/locally/">PyTorch</a>
+    <ul><li>Follow the instructions in the link to determine the correct install command</li></ul>
+  </li>
 </ol>
 
 ### Producing Animations
