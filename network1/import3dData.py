@@ -3,7 +3,7 @@
 
 # Basic import statements for the project
 
-# In[62]:
+# In[ ]:
 
 
 print("The algorithm is running! Sit back and enjoy these print statement updates.")
@@ -25,7 +25,7 @@ print("Imports Complete")
 
 # 1. Function for returning a list of filenames for the dance data
 
-# In[176]:
+# In[ ]:
 
 
 def get_file_list():
@@ -43,7 +43,7 @@ print("Detected " + str(len(files)) + " files of 3D dance data.")
 
 # The following cell defines the columns for our data.
 
-# In[3]:
+# In[ ]:
 
 
 data_columns = ['head_x', 'head_y', 'head_z',
@@ -70,7 +70,7 @@ data_columns = ['head_x', 'head_y', 'head_z',
                'footr_x', 'footr_y', 'footr_z']
 
 
-# In[4]:
+# In[ ]:
 
 
 def create_df(filename):
@@ -127,7 +127,7 @@ def create_df(filename):
     return df, clap_frame
 
 
-# In[5]:
+# In[ ]:
 
 
 #setting up spotify credentials
@@ -145,7 +145,7 @@ sp = set_spotify()
 print("Spotify API Reached")
 
 
-# In[6]:
+# In[ ]:
 
 
 '''
@@ -169,7 +169,7 @@ def get_beats(song_id, filename):
     return beats
 
 
-# In[7]:
+# In[ ]:
 
 
 def add_beats(dance, beats, clap_frame, filename):
@@ -193,7 +193,7 @@ def add_beats(dance, beats, clap_frame, filename):
     return clap_to_end
 
 
-# In[8]:
+# In[ ]:
 
 
 def extrapolate_id(dataname):
@@ -202,7 +202,7 @@ def extrapolate_id(dataname):
     return track_id
 
 
-# In[9]:
+# In[ ]:
 
 
 #segment_beats takes the result of parse song and returns a list of dataframes of individual beats to add to training set
@@ -217,7 +217,7 @@ def segment_beats(dance_data):
     return song_beats
 
 
-# In[179]:
+# In[ ]:
 
 
 #gets the filename for a txt of raw kinekt data with specified naming convention
@@ -364,7 +364,7 @@ def standardize_beats(filename):
     return standard_beats
 
 
-# In[180]:
+# In[ ]:
 
 
 #defining columns for beat structure
@@ -397,7 +397,7 @@ print("All data imported.")
 
 # # MACHINE LEARNING
 
-# In[94]:
+# In[ ]:
 
 
 wcss = []
@@ -416,7 +416,7 @@ for i in k_range:
 #plt.show()
 
 
-# In[185]:
+# In[ ]:
 
 
 #the lowest wcss*k will be chosen as the optimal k value
@@ -428,7 +428,7 @@ kmeans.fit(training_df_of_beats)
 all_predictions = kmeans.predict(training_df_of_beats)
 
 
-# In[169]:
+# In[ ]:
 
 
 #setting up dataframe for 2nd neural network (synthesis)
@@ -468,7 +468,7 @@ def create_move_df(filename):
 
 
 
-# In[172]:
+# In[ ]:
 
 
 print("Now obtaining Spotipy data about song features, each file name will be printed as it is accessed.")
@@ -485,13 +485,14 @@ training_df_of_moves
 print("Spotify data successfully obtained for all songs. Now attaching the dance moves to their respective features.")
 
 
-# In[186]:
+# In[ ]:
 
 
 training_set = training_df_of_moves.reset_index().merge(pd.DataFrame(data=all_predictions, columns=["move_class"]), left_index=True, right_index=True)
+training_set.to_csv("net2input.csv", index=False)
 
 
-# In[187]:
+# In[ ]:
 
 
 print("Data successfully merged, training move choice algorithm.")
